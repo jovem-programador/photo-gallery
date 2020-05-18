@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+// Importação de PhotoService
+import { PhotoService } from '../services/photo.service';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,6 +10,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public photoService: PhotoService) {}
+
+ngOnInit() {
+this.photoService.loadSaved();
+}
 
 }
