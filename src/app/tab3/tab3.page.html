@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Status do Dispositivo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Status do Dispositivo</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <div class="ion-margin">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <h3>Status da Bateria:</h3>
+    <small>Carga: {{outBat * 100}}% - <span *ngIf="outBatCharge">Carregando...</span></small>
+    <ion-progress-bar [value]="outBat"></ion-progress-bar>
+
+    <h3>Sistema:</h3>
+    <ul>
+        <li>Sistema: {{outSystemOp}}</li>
+    </ul>
+
+    
+  
+</div>
+
+  <!--<app-explore-container name="Tab 3 page"></app-explore-container>-->
 </ion-content>

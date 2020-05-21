@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  
+    <ion-slides>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="https://picsum.photos/200"/>
+          <h2>Bem Vindo</h2>
+          <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="https://picsum.photos/200"/>
+        <h2>O'que é Ionic?</h2>
+        <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="https://picsum.photos/200"/>
+        <h2>Pronto para Comecar?</h2>
+        <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward" (click)="photoButton()"></ion-icon></ion-button>
+      </ion-slide>
+
+    </ion-slides>
+  
+  <!--<app-explore-container name="Tab 1 page"></app-explore-container>-->
 </ion-content>
